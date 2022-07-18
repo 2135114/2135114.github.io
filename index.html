@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>兵庫県の紹介</title>
+    </head>
+
+    <body class="container">
+        <main>
+            <h1 id="top">兵庫県民の兵庫県民による兵庫県民のための兵庫県の紹介</h1>
+            <img id="hogehoge" src="img/map.jpg" alt="兵庫県の位置">
+            <button type="button" onclick="map()">地図のon/off</button>
+
+            <h2 id="outline">概要</h2>
+            <p>人口は約540万人で、2011年頃から人口が年々減少している。</p>
+            <p>北部は自然が豊か、南部は都市が発展しており、一度で二度おいしい県。</p>
+            <p>住みたい県ランキングは<span style="color:rgb(255, 128, 0)">絶妙の8位</span>あたりになることが多い。</p>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <p><a href="https://web.pref.hyogo.lg.jp"
+                target="_blank">参考：兵庫県ホームページ</a>
+            </p>
+
+            <h2 id="food">食文化</h2>
+            <ul>
+                <li>
+                    明石焼き
+                </li>
+                おいしい、たこ焼きと似てる
+                <li>
+                    そばめし
+                </li>
+                おいしい、刻んだソース焼きそばをご飯と混ぜたもの
+                <li>
+                    いかなごのくぎ煮
+                </li>
+                おいしい、イカナゴという稚魚を甘辛く煮たもの
+                <li>
+                    そうめん
+                </li>
+                おいしい、素麺神社も存在するぐらい生産量が多い
+            </ul>
+
+            <h2 id="history">歴史</h2>
+            <p>平安時代以前：比較的大きな都市であり港や荘園などがあった。武器を収める倉が作られたことが名前の由来？</p>
+            <p>鎌倉時代～戦国時代：発展していくも、国際貿易の舞台は堺に移っていった。</p>
+            <p>江戸時代：様々な業が盛んに（酒造、製紙、鉱業など）</p>
+            <p>明治時代：廃藩置県により3つの地域が合併し現在の県域が確定</p>
+            <p>平成：バブル崩壊による不況、阪神淡路大震災</p>
+            <p><a href="https://web.pref.hyogo.lg.jp/kk32/pa13_000000011.html"
+                    target="_blank">参考：https://web.pref.hyogo.lg.jp/kk32/pa13_000000011.html</a>
+            </p>
+
+            <h2 id="sightseeing">観光</h2>
+            <h3>おすすめ観光スポットランキング</h3>
+            <table>
+                <tr>
+                    <th>一位</th>
+                    <td>姫路城</td>
+                </tr>
+                <tr>
+                    <th>二位</th>
+                    <td>神戸市須磨海浜水族園</td>
+                </tr>
+                <tr>
+                    <th>三位</th>
+                    <td>城崎温泉</td>
+                </tr>
+                <tr>
+                    <th>四位</th>
+                    <td>六甲山</td>
+                </tr>
+                <tr>
+                    <th>五位</th>
+                    <td>竹田城跡</td>
+                </tr>
+            </table>
+
+            <h2>クイズ</h2>
+            <div id="quiz">
+                <p>Q:兵庫県の名産品はどれ？</p>
+                <p>
+                <label>
+                    <input type="radio" name="product" value="shitake">
+                    しいたけ
+                </label>
+                </p>
+                <p>
+                <label>
+                    <input type="radio" name="product" value="horennso">
+                    ほうれん草
+                </label>
+                </p>
+                <p>
+                <label>
+                    <input type="radio" name="product" value="tamanegi">
+                    玉ねぎ
+                </label>
+                </p>
+                <p>
+                <label>
+                    <input type="radio" name="product" value="tomato">
+                    トマト
+                </label>
+                </p>
+                <button type="button" onclick="answer()">回答する</button>
+                <p id="answer">正解は…</p>
+            </div>
+        </main>
+
+        <aside>
+            <div class="linklist">
+                <p>目次：ここから飛べるよ！</p>
+                <ul id="links">
+                    <li><a href="#top">top</a></li>
+                    <li><a href="#outline">概要</a></li>
+                    <li><a href="#food">食文化</a></li>
+                    <li><a href="#history">歴史</a></li>
+                    <li><a href="#sightseeing">観光</a></li>
+                    <li><a href="#quiz">クイズ</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <!-- chart -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js" integrity="sha512-5m2r+g00HDHnhXQDbRLAfZBwPpPCaK+wPLV6lm8VQ+09ilGdHfXV7IVyKPkLOTfi4vTTUVJnz7ELs7cA87/GMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- js達 -->
+        <script src="./js/main.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/chart.js"></script>
+    </body>
+</html>
